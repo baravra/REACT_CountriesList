@@ -16,11 +16,11 @@ const Countries = () => {
     
     if (isFetching) return <h1>Loading...</h1>;
 
-    console.log(data)
-
     // return <h1>{data[0].name}</h1>
     return (
-        <div className='grid grid-cols-6 gap-6 mt-16 '>
+      <div>
+        <h1 className='font-bold text-slate-800 block text-2xl'>Países: {data.length}</h1>
+        <div className='grid grid-cols-5 gap-6 mt-16 '>
             {data.map((country: { numericCode: Key | number; name: string; population: number; flag: string; region: string; }) => {
               return(
                 <CountryFlag 
@@ -32,6 +32,7 @@ const Countries = () => {
                 />
               )
             })}
+        </div>
       </div>
     )
 

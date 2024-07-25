@@ -7,12 +7,12 @@ interface CountryInfo{
 
 export function CountryFlag(props: CountryInfo) {
   return (
-    <div className="relative rounded-lg overflow-hidden  bg-blue-500" >
-        <img  className="h-4 w-4" alt=""  src={props.flag}/>
+    <div className="rounded-lg overflow-hidden shadow-md hover:shadow-2xl hover:cursor-pointer" >
+        <img  className="h-40 w-70 border-2 opacity-85" alt=""  src={props.flag}/>
 
-        <div className='w-full pt-16 pb-4 px-4 bg-game-gradient absolute bottom-0 left-0 right-0'>
-            <strong className='font-bold text-white block'>{props.name}</strong>
-            <span className='text-zinc-300 text-sm block mt-1'>{props.population} pessoas - {props.region}</span>
+        <div className='w-full pt-1 pb-4 px-4 bg-game-gradient bottom-0 left-0 right-0'>
+            <strong className='font-bold text-slate-800 block'>{props.name}</strong>
+            <span className='text-slate-700 text-sm block mt-1'>{props.population} pessoas - {props.region}</span>
         </div>
     </div>
   );
